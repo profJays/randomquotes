@@ -7,18 +7,37 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+.image-container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: #5372F0;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('books.jpg');
 }
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 10, 68, 0.8); /* Adjust the last value (0.5) to control the transparency */
+  /* z-index: 1; */
+}
+
+
 .wrapper{
-  width: 605px;
+  width: 705px;
   background: #fff;
   border-radius: 15px;
   padding: 30px 30px 25px;
+  opacity: 0.6;
   box-shadow: 0 12px 35px rgba(0,0,0,0.1);
 }
 header, .content :where(i, p, span){
@@ -113,3 +132,23 @@ ul .speech.active{
   opacity: 0.7;
   pointer-events: none;
 }
+
+/* Responsiveness for other Screens using Media Query Starts Here */
+
+@media only screen and (max-width:768px){
+    /* Home Page Mobile */
+    .wrapper {
+      margin: 0 30px;
+    }
+    .wrapper header {
+      font-size: 25px;
+      font-weight: 600;
+      text-align: center;
+  }
+    .buttons button{
+      font-size: 13px;
+      cursor: pointer;
+      padding: 10px 8px;
+      border-radius: 10px;
+    }
+  }
