@@ -10,15 +10,16 @@
 .container {
   display: flex;
   align-items: center;
+  width: 100%;
+  /* height: 100%; */
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
   background: #5372F0;
+  background-image: url('books.jpg');
   background-size: cover;
   position: relative;
-  width: 100%;
-  height: 100%;
-  background-image: url('books.jpg');
+  min-height: 100vh;
+ 
 }
 
 .container::before {
@@ -46,6 +47,7 @@
   opacity: 0.6;
   box-shadow: 0 12px 35px rgba(0,0,0,0.1);
 }
+
 header, .content :where(i, p, span){
   color: #202842;
 }
@@ -186,27 +188,28 @@ ul .speech.active{
   opacity: 0.6;
   box-shadow: 0 12px 35px rgba(0,0,0,0.1);
   /* flex: 1; */
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 /* Responsiveness for other Screens using Media Query Starts Here */
 
 @media only screen and (max-width:768px){
     /* Home Page Mobile */
-    .container{
-      /* min-height: 100%; */
+    .container {
+      min-height: 98vh;
     }
-
-    .wrapper {
-      width: 305px;
-      /* margin: 0 30px; */
+    .quote-container{
+      display: flex;
+      align-items: center;
+    }
+    .wrapper{
+      width: 85%;
     }
     .wrapper header {
       font-size: 25px;
       font-weight: 600;
       text-align: center;
     }
-
     .quote-area .quote{
       font-size: 18px;
       text-align: center;
@@ -220,6 +223,7 @@ ul .speech.active{
     }
 
     /* About Page Mobile */
+
     .profile-container{
       margin-top: 50px;
     }
@@ -229,7 +233,7 @@ ul .speech.active{
       margin-bottom: 10px;
     }
     .profile-wrapper {
-      width: 80%;
+      width: 85%;
       height: 63vh;
       padding: 20px;
       text-align: justify;
