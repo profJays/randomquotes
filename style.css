@@ -155,6 +155,11 @@ ul .speech.active{
   text-decoration: none;
 }
 
+.foots i{
+  color: #a5c5ec;
+  text-decoration: none;
+}
+
 /* About Page */
 .profile-container{
   display: flex;
@@ -196,14 +201,14 @@ ul .speech.active{
 @media only screen and (max-width:768px){
     /* Home Page Mobile */
     .container {
-      min-height: 98vh;
+      margin: 0;
     }
     .quote-container{
       display: flex;
       align-items: center;
     }
     .wrapper{
-      width: 85%;
+      width: 87%;
     }
     .wrapper header {
       font-size: 25px;
