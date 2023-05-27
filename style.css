@@ -7,6 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body{
+  overflow: hidden;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -15,7 +19,7 @@
   justify-content: center;
   flex-direction: column;
   background: #5372F0;
-  background-image: url('books.jpg');
+  background-image: url('book-bg.jpg');
   background-size: cover;
   position: relative;
   min-height: 100vh;
@@ -148,6 +152,7 @@ ul .speech.active{
   align-items: center;
   justify-content: baseline;
   flex-shrink: 0;
+  margin-bottom: 20px;
 }
 
 .foots a{
