@@ -232,6 +232,8 @@ ul .speech.active{
 
     .foots{
       margin-bottom: 35px;
+      /* justify-content: center; */
+      flex-shrink: 0;
     }
 
     /* About Page Mobile */
